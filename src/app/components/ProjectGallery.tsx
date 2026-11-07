@@ -138,7 +138,7 @@ export default function ProjectGallery({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={
-                isRu ? "Поиск по названию или софту..." : "Search by title or software..."
+                isRu ? "Поиск по названию, категории или софту..." : "Search by title, category, or software..."
               }
               className="w-full rounded-full border border-black bg-transparent py-2.5 pr-8 pl-10 font-mono text-[10px] tracking-[0.1em] uppercase text-black placeholder:text-black/40 outline-none transition-colors focus:bg-white"
             />
@@ -224,8 +224,31 @@ export default function ProjectGallery({
           </div>
         </div>
 
-        {/* Dropdowns row: Software & Renderer */}
+        {/* Dropdowns row: Category, Software & Renderer */}
         <div className="mt-3 flex flex-wrap items-center gap-2.5">
+          {/* Category Dropdown */}
+          <div className="flex items-center gap-1.5">
+            <label
+              htmlFor="filter-category"
+              className="font-mono text-[9px] tracking-[0.12em] text-black/55 uppercase"
+            >
+              {isRu ? "Категория:" : "Category:"}
+            </label>
+            <select
+              id="filter-category"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="rounded-full border border-black bg-transparent px-3 py-1 font-mono text-[9px] tracking-[0.1em] uppercase text-black outline-none transition-colors hover:bg-white focus:bg-white cursor-pointer"
+            >
+              <option value="all">{isRu ? "Все категории" : "All categories"}</option>
+              {categories.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </select>
+          </div>
+
           {/* Software Filter */}
           {softwareList.length > 0 && (
             <div className="flex items-center gap-1.5">
@@ -281,9 +304,12 @@ export default function ProjectGallery({
           </div>
         </div>
 
-        {/* Categories Pills row */}
-        {categories.length > 1 && (
+        {/* Categories Pills row - visible always */}
+        {categories.length > 0 && (
           <div className="mt-3 flex items-center gap-1.5 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden pt-1 pb-0.5">
+            <span className="font-mono text-[9px] tracking-[0.12em] text-black/45 uppercase mr-1 shrink-0">
+              {isRu ? "Категории:" : "Categories:"}
+            </span>
             <button
               type="button"
               onClick={() => setSelectedCategory("all")}
@@ -293,7 +319,7 @@ export default function ProjectGallery({
                   : "bg-transparent text-black hover:bg-black/10"
               }`}
             >
-              {isRu ? "Все категории" : "All categories"}
+              {isRu ? "Все" : "All"}
             </button>
             {categories.map((category) => (
               <button
