@@ -310,11 +310,6 @@ export default function EditProjectForm({
           </label>
 
           <label className={labelClassName}>
-            WORKFLOW
-            <input className={fieldClassName} name="workflow" defaultValue={project.specs?.workflow ?? ""} placeholder="High to Low Poly" required />
-          </label>
-
-          <label className={`${labelClassName} md:col-span-2`}>
             РЕНДЕР-ДВИЖОК
             <input className={fieldClassName} name="renderer" defaultValue={project.specs?.renderer ?? ""} placeholder="Cycles" required />
           </label>

@@ -54,7 +54,6 @@ const SPEC_TEMPLATES: SpecTemplate[] = [
       textures: "4K PBR",
       materials: "1",
       uvMaps: "1",
-      workflow: "High to Low Poly",
       renderer: "Cycles",
     },
   },
@@ -65,7 +64,6 @@ const SPEC_TEMPLATES: SpecTemplate[] = [
       textures: "2K PBR",
       materials: "1",
       uvMaps: "1",
-      workflow: "Low Poly",
       renderer: "Eevee",
     },
   },
@@ -76,7 +74,6 @@ const SPEC_TEMPLATES: SpecTemplate[] = [
       textures: "Procedural",
       materials: "3",
       uvMaps: "1",
-      workflow: "Subdivision Modeling",
       renderer: "Cycles",
     },
   },
@@ -335,7 +332,6 @@ export default function AdminDashboard({
       textures: project.specs?.textures ?? "",
       materials: project.specs?.materials ?? "",
       uvMaps: project.specs?.uvMaps ?? "",
-      workflow: project.specs?.workflow ?? "",
       renderer: project.specs?.renderer ?? "",
     });
     setRequestState({ kind: "idle" });
@@ -545,11 +541,6 @@ export default function AdminDashboard({
           </label>
 
           <label className={labelClassName}>
-            WORKFLOW
-            <input className={fieldClassName} name="workflow" defaultValue="High to Low Poly" required />
-          </label>
-
-          <label className={`${labelClassName} md:col-span-2`}>
             РЕНДЕР-ДВИЖОК
             <input className={fieldClassName} name="renderer" defaultValue="Cycles" required />
           </label>

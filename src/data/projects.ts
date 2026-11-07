@@ -19,8 +19,8 @@ export type PortfolioProject = {
     textures: string;
     materials: string;
     uvMaps: string;
-    workflow: string;
     renderer: string;
+    workflow?: string;
   };
   translations?: {
     ru?: {

@@ -153,7 +153,6 @@ export async function POST(request: Request) {
       textures: getText(formData, "textures"),
       materials: getText(formData, "materials"),
       uvMaps: getText(formData, "uvMaps"),
-      workflow: getText(formData, "workflow"),
       renderer: getText(formData, "renderer"),
     };
     const description =
@@ -365,7 +364,6 @@ export async function PATCH(request: Request) {
       textures: getText(formData, "textures"),
       materials: getText(formData, "materials"),
       uvMaps: getText(formData, "uvMaps"),
-      workflow: getText(formData, "workflow"),
       renderer: getText(formData, "renderer"),
     };
     const description =

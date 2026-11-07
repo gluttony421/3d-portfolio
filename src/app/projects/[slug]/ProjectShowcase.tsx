@@ -319,7 +319,6 @@ export default function ProjectShowcase({
             [text.textures, project.specs?.textures],
             [text.materials, project.specs?.materials],
             [text.uvMaps, project.specs?.uvMaps],
-            [text.workflow, project.specs?.workflow],
             [text.software, project.software.join(" / ")],
             [text.renderer, project.specs?.renderer],
           ].map(([label, value]) => (
