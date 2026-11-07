@@ -1,0 +1,47 @@
+{
+  "en": {
+    "about": {
+      "label": "About / Practice",
+      "title": "Creating varied 3D models across objects, vehicles, environments and experimental studies.",
+      "focusLabel": "Focus",
+      "focus": [
+        "3D modeling",
+        "Texturing",
+        "Visualization"
+      ],
+      "toolsLabel": "Tools",
+      "tools": [
+        "Blender",
+        "Substance 3D Painter"
+      ],
+      "contactLabel": "Contact",
+      "contact": [
+        "gluttony421@gmail.com",
+        "@gluttony6666"
+      ]
+    }
+  },
+  "ru": {
+    "about": {
+      "label": "Обо мне / Практика",
+      "title": "Создаю разные 3D-модели: предметы, транспорт, окружение и экспериментальные работы.",
+      "focusLabel": "Направления",
+      "focus": [
+        "3D-моделирование",
+        "Текстурирование",
+        "Визуализация"
+      ],
+      "toolsLabel": "Инструменты",
+      "tools": [
+        "Blender",
+        "Substance 3D Painter"
+      ],
+      "contactLabel": "Контакты",
+      "contact": [
+        "gluttony421@gmail.com",
+        "@gluttony6666",
+        "+79385334074"
+      ]
+    }
+  }
+}

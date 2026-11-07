@@ -1,0 +1,120 @@
+[
+  {
+    "slug": "wdk-5000",
+    "title": "WDK-5000 Mobile Spot Welder",
+    "category": "Industrial Modeling",
+    "cover": "/projects/wdk-5000/cover.png",
+    "model": "/projects/wdk-5000/model.glb",
+    "description": "WDK-5000 Mobile Spot Welder — Industrial Modeling (Blender, Substance 3D Painter, 2025).",
+    "translations": {
+      "ru": {
+        "title": "WDK-5000 споттер на тележке",
+        "category": "Промышленное моделирование",
+        "description": "WDK-5000 споттер на тележке — Промышленное моделирование (Blender, Substance 3D Painter, 2025)."
+      }
+    },
+    "software": [
+      "Blender",
+      "Substance 3D Painter"
+    ],
+    "year": 2025,
+    "size": "large",
+    "specs": {
+      "polygons": "Blender, Substance 3D Painter",
+      "vertices": "13,420",
+      "textures": "24,580 Tris",
+      "materials": "13,420",
+      "uvMaps": "4K PBR",
+      "workflow": "3",
+      "renderer": "1"
+    },
+    "gallery": [],
+    "video": "https://www.youtube.com/watch?v=fT9AHvaUdRM"
+  },
+  {
+    "slug": "kb-4-kaskad",
+    "title": "KB-4 \"KASKAD\"",
+    "category": "Industrial Modeling",
+    "cover": "/projects/kaskad.png",
+    "description": "Industrial woodworking equipment 3D modeling.",
+    "translations": {
+      "ru": {
+        "title": "КБ-4 «КАСКАД»",
+        "category": "Промышленное моделирование",
+        "description": "3D-моделирование промышленного деревообрабатывающего оборудования."
+      }
+    },
+    "software": [
+      "Blender"
+    ],
+    "year": 2026,
+    "size": "small",
+    "gallery": []
+  },
+  {
+    "slug": "mitu-01f",
+    "title": "MITU 01F",
+    "category": "Industrial Modeling",
+    "cover": "/projects/mitu.png",
+    "description": "3D modeling of industrial equipment.",
+    "translations": {
+      "ru": {
+        "title": "MITU 01F",
+        "category": "Промышленное моделирование",
+        "description": "3D-моделирование промышленного оборудования."
+      }
+    },
+    "software": [
+      "Blender"
+    ],
+    "year": 2026,
+    "size": "large",
+    "gallery": []
+  },
+  {
+    "slug": "metal-master-mlf-3015r",
+    "title": "Metal Master MLF-3015R",
+    "category": "Hard Surface",
+    "cover": "/projects/metal-master-mlf-3015r/cover.png",
+    "model": "/projects/metal-master-mlf-3015r/model.glb",
+    "description": "Industrial laser cutting machine 3D modeling and visualization.",
+    "translations": {
+      "ru": {
+        "title": "Metal Master MLF-3015R",
+        "category": "Твёрдотельное моделирование",
+        "description": "3D-моделирование и визуализация промышленного лазерного станка."
+      }
+    },
+    "software": [
+      "Blender"
+    ],
+    "year": 2026,
+    "size": "large",
+    "gallery": [
+      "/projects/metal-master-mlf-3015r/gallery-1793343887027-1.jpg",
+      "/projects/metal-master-mlf-3015r/gallery-1793343887027-2.png",
+      "/projects/metal-master-mlf-3015r/gallery-1793343887027-3.png",
+      "/projects/metal-master-mlf-3015r/gallery-1793343887027-5.png",
+      "/projects/metal-master-mlf-3015r/gallery-1793343887027-6.png"
+    ]
+  },
+  {
+    "slug": "metal-master-hpj-2040-d-sensor",
+    "title": "Metal Master HPJ 2040 D Sensor",
+    "category": "Industrial Modeling",
+    "cover": "/projects/press.png",
+    "description": "Industrial press brake 3D modeling.",
+    "translations": {
+      "ru": {
+        "title": "Metal Master HPJ 2040 D Sensor",
+        "category": "Промышленное моделирование",
+        "description": "3D-моделирование промышленного листогибочного пресса."
+      }
+    },
+    "software": [
+      "Blender"
+    ],
+    "year": 2026,
+    "size": "small"
+  }
+]
