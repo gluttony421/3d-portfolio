@@ -298,7 +298,7 @@ export default function ProjectShowcase({
           )}
         </div>
 
-        <div className="flex min-h-12 items-center justify-between border-t border-white/15 px-4 font-mono text-[10px] font-normal tracking-[0.14em] text-white/55 uppercase sm:px-6 sm:text-xs lg:px-10">
+        <div className="flex min-h-12 items-center border-t border-white/15 px-4 font-mono text-[10px] font-normal tracking-[0.14em] text-white/55 uppercase sm:px-6 sm:text-xs lg:px-10">
           <span>
             {isVideo
               ? text.videoHint
@@ -308,7 +308,6 @@ export default function ProjectShowcase({
                   ? text.interactionHint
                   : text.finalRender}
           </span>
-          <span>{project.year}</span>
         </div>
       </section>
 
