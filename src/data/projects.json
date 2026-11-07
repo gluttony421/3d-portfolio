@@ -20,12 +20,12 @@
     "year": 2025,
     "size": "large",
     "specs": {
-      "polygons": "13,580",
-      "vertices": "24,580",
-      "textures": "4K PBR",
-      "materials": "3",
-      "uvMaps": "1",
-      "renderer": "Cycles"
+      "polygons": "Blender, Substance 3D Painter",
+      "vertices": "13,420",
+      "textures": "24,580 Tris",
+      "materials": "13,420",
+      "uvMaps": "4K PBR",
+      "renderer": "1"
     },
     "gallery": [],
     "video": "https://www.youtube.com/watch?v=fT9AHvaUdRM"

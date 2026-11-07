@@ -1,15 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ViewTransition } from "react";
 import { projects } from "@/data/projects";
 import { siteSettings } from "@/data/site-settings";
 import FeaturedProjectCarousel from "./FeaturedProjectCarousel";
 import ContactLinks from "./ContactLinks";
-import ProjectGallery from "./ProjectGallery";
 import {
   alternateLocale,
   copy,
   homePath,
   localizeProject,
+  projectPath,
   type Locale,
 } from "@/data/i18n";
 
@@ -125,11 +126,96 @@ export default function PortfolioHome({ locale }: { locale: Locale }) {
             </h2>
           </div>
 
-          <ProjectGallery
-            projects={localizedProjects}
-            featuredSlug={featuredProject?.slug}
-            locale={locale}
-          />
+          <div className="grid grid-cols-1 gap-3 border-b border-black p-3 sm:grid-cols-2 lg:grid-cols-3">
+            {localizedProjects.map((project) => {
+              const projectImage = (
+                <Image
+                  src={project.cover}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-contain p-[4%] transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                />
+              );
+
+              return (
+                <article
+                  key={project.slug}
+                  className="portfolio-card group min-w-0"
+                >
+                  <Link
+                    href={projectPath(locale, project.slug)}
+                    transitionTypes={["nav-forward"]}
+                    className="block"
+                  >
+                    <div className="relative aspect-square overflow-hidden bg-[#d8d7d1]">
+                      {project.slug === featuredProject?.slug ? (
+                        projectImage
+                      ) : (
+                        <ViewTransition
+                          name={`project-cover-${project.slug}`}
+                          share="project-morph"
+                          default="none"
+                        >
+                          {projectImage}
+                        </ViewTransition>
+                      )}
+
+                      {(project.model || project.video) && (
+                        <div className="pointer-events-none absolute top-2.5 left-2.5 z-10 flex gap-1.5">
+                          {project.model && (
+                            <span
+                              className="flex items-center gap-1 rounded-full bg-black px-2.5 py-1 font-mono text-[9px] tracking-[0.14em] text-white uppercase"
+                              title={locale === "ru" ? "Интерактивная 3D-модель" : "Interactive 3D model"}
+                            >
+                              <svg
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                                className="h-3 w-3"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinejoin="round"
+                              >
+                                <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z" />
+                                <path d="M3 7l9 5 9-5M12 12v10" />
+                              </svg>
+                              3D
+                            </span>
+                          )}
+                          {project.video && (
+                            <span
+                              className="flex items-center gap-1 rounded-full border border-black bg-[#efeee9] px-2.5 py-1 font-mono text-[9px] tracking-[0.14em] text-black uppercase"
+                              title={locale === "ru" ? "Есть видео" : "Has video"}
+                            >
+                              <svg
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                                className="h-2.5 w-2.5"
+                                fill="currentColor"
+                              >
+                                <path d="M6 4v16l14-8L6 4Z" />
+                              </svg>
+                              {locale === "ru" ? "Видео" : "Video"}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="pt-2 pb-4">
+                      <h3 className="text-[clamp(1.15rem,1.55vw,1.75rem)] leading-[0.94] font-[950] tracking-[-0.05em] uppercase">
+                        {project.title}
+                      </h3>
+                      <p className="mt-1 font-mono text-[9px] tracking-[0.09em] text-black/55 uppercase sm:text-[10px]">
+                        {project.category} · {project.software[0]}
+                      </p>
+                    </div>
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
         </section>
 
         <section
