@@ -94,18 +94,18 @@ export default function ProjectShowcase({
     >
     <main className="min-h-screen bg-[#efeee9] text-[#050505]">
       <header
-        className="sticky top-0 z-50 flex h-[4.375rem] items-center justify-between border-b border-black/20 bg-[#efeee9]/95 px-4 backdrop-blur-md sm:px-6 lg:px-10"
+        className="sticky top-0 z-50 flex h-14 md:h-[4.375rem] items-center justify-between border-b border-black/20 bg-[#efeee9]/95 px-4 backdrop-blur-md sm:px-6 lg:px-10"
         style={{ viewTransitionName: "site-header" }}
       >
         <Link
           href={localizedHomePath}
           transitionTypes={["nav-back"]}
-          className="text-[1.75rem] leading-none font-black tracking-[-0.04em] transition-opacity hover:opacity-55 focus-visible:outline-2 focus-visible:outline-offset-4 md:text-[2rem]"
+          className="text-[1.35rem] sm:text-[1.75rem] md:text-[2rem] leading-none font-black tracking-[-0.04em] transition-opacity hover:opacity-55 focus-visible:outline-2 focus-visible:outline-offset-4"
         >
           PORTFOLIO.
         </Link>
 
-        <div className="flex items-center gap-6 font-mono text-[10px] font-normal tracking-[0.16em] uppercase sm:text-xs">
+        <div className="flex items-center gap-4 sm:gap-6 font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.14em] sm:tracking-[0.16em] uppercase">
           <span className="hidden text-black/45 sm:inline">
             {formatProjectNumber(projectNumber)} / {formatProjectNumber(projectCount)}
           </span>
@@ -133,32 +133,32 @@ export default function ProjectShowcase({
         </div>
       </header>
 
-      <section className="grid min-h-[calc(40.32svh-2.8rem)] grid-cols-1 border-b border-black/20 lg:grid-cols-12">
-        <div className="flex flex-col justify-between px-4 py-[1.12rem] sm:px-6 sm:py-[1.4rem] lg:col-span-9 lg:border-r lg:border-black/20 lg:px-10 lg:py-[1.68rem]">
-          <p className="hero-reveal font-mono text-[10px] font-normal tracking-[0.18em] text-black/50 uppercase sm:text-xs">
+      <section className="grid min-h-0 grid-cols-1 border-b border-black/20 lg:min-h-[calc(40.32svh-2.8rem)] lg:grid-cols-12">
+        <div className="flex flex-col justify-between px-4 py-4 sm:px-6 sm:py-[1.4rem] lg:col-span-9 lg:border-r lg:border-black/20 lg:px-10 lg:py-[1.68rem]">
+          <p className="hero-reveal font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.16em] sm:tracking-[0.18em] text-black/50 uppercase sm:text-xs">
             {project.category} / {project.year}
           </p>
 
           <h1
-            className={`hero-reveal hero-reveal-delay my-[2.24rem] max-w-full break-words leading-[0.84] font-[950] tracking-[-0.08em] uppercase sm:my-[2.8rem] ${
+            className={`hero-reveal hero-reveal-delay my-4 sm:my-[2.24rem] max-w-full break-words leading-[0.9] sm:leading-[0.84] font-[950] tracking-[-0.04em] sm:tracking-[-0.08em] uppercase lg:my-[2.8rem] ${
               usesCompactTitle
-                ? "hyphens-auto text-[clamp(2rem,8.2vw,3.25rem)] lg:text-[clamp(3.25rem,4.55vw,6rem)]"
-                : "text-[clamp(3.25rem,4.55vw,6rem)]"
+                ? "hyphens-auto text-[clamp(1.75rem,7.5vw,3rem)] lg:text-[clamp(3.25rem,4.55vw,6rem)]"
+                : "text-[clamp(1.85rem,7.5vw,3.25rem)] lg:text-[clamp(3.25rem,4.55vw,6rem)]"
             }`}
           >
             {project.title}
           </h1>
         </div>
 
-        <aside className="flex min-h-[5.6rem] flex-col justify-between border-t border-black/20 px-4 py-[0.84rem] sm:px-6 lg:col-span-3 lg:min-h-0 lg:border-t-0 lg:px-8 lg:py-[1.4rem]">
-          <span className="font-mono text-[10px] font-normal tracking-[0.18em] text-black/45 uppercase sm:text-xs">
+        <aside className="flex min-h-0 flex-col justify-between border-t border-black/20 px-4 py-3 sm:px-6 lg:col-span-3 lg:border-t-0 lg:px-8 lg:py-[1.4rem]">
+          <span className="font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.16em] sm:tracking-[0.18em] text-black/45 uppercase sm:text-xs">
             {text.index}
           </span>
-          <div className="mt-[1.68rem] flex items-end justify-between lg:mt-0 lg:block">
-            <span className="text-6xl leading-none font-medium tracking-[-0.06em] lg:text-7xl">
+          <div className="mt-2 flex items-baseline justify-between sm:mt-4 lg:mt-0 lg:block">
+            <span className="text-4xl sm:text-6xl leading-none font-medium tracking-[-0.06em] lg:text-7xl">
               {formatProjectNumber(projectNumber)}
             </span>
-            <p className="max-w-32 text-right text-xs leading-relaxed text-black/55 lg:mt-5 lg:text-left">
+            <p className="max-w-32 text-right text-[11px] sm:text-xs leading-relaxed text-black/55 lg:mt-5 lg:text-left">
               {text.summary}
             </p>
           </div>
@@ -232,7 +232,7 @@ export default function ProjectShowcase({
           </div>
         </div>
 
-        <div className="relative h-[72svh] min-h-[500px] w-full overflow-hidden lg:h-[88svh]">
+        <div className="relative h-[62svh] min-h-[380px] w-full overflow-hidden sm:h-[72svh] sm:min-h-[500px] lg:h-[88svh]">
           {isVideo && videoEmbedUrl ? (
             <div className="absolute inset-0 flex items-center justify-center bg-black pt-16 sm:px-8 sm:py-20 lg:px-14">
               <iframe
@@ -312,8 +312,8 @@ export default function ProjectShowcase({
         </div>
       </section>
 
-      <section className="border-b border-black/20 bg-[#efeee9] px-4 py-7 text-black sm:px-6 sm:py-9 lg:px-10">
-        <dl className="grid sm:grid-cols-2 lg:grid-cols-4">
+      <section className="border-b border-black/20 bg-[#efeee9] px-4 py-5 text-black sm:px-6 sm:py-9 lg:px-10">
+        <dl className="grid grid-cols-2 gap-x-4 gap-y-0 sm:grid-cols-2 lg:grid-cols-4">
           {[
             [text.polygons, project.specs?.polygons],
             [text.vertices, project.specs?.vertices],
@@ -326,12 +326,12 @@ export default function ProjectShowcase({
           ].map(([label, value]) => (
             <div
               key={label}
-              className="border-t border-black/20 py-5 sm:px-5"
+              className="border-t border-black/20 py-3 sm:py-5 sm:px-5"
             >
-              <dt className="font-mono text-[9px] tracking-[0.12em] text-black/50 uppercase">
+              <dt className="font-mono text-[8px] sm:text-[9px] tracking-[0.12em] text-black/50 uppercase">
                 {label}
               </dt>
-              <dd className="mt-1.5 text-base font-semibold tracking-[-0.02em]">
+              <dd className="mt-1 text-sm sm:text-base font-semibold tracking-[-0.02em] break-words">
                 {value || "—"}
               </dd>
             </div>
@@ -341,14 +341,14 @@ export default function ProjectShowcase({
 
       {project.gallery && project.gallery.length > 0 && (
         <section className="border-b border-black/20" aria-labelledby="project-gallery-title">
-          <div className="flex min-h-24 items-end justify-between border-b border-black/20 px-4 py-6 sm:px-6 lg:px-10">
+          <div className="flex min-h-16 sm:min-h-24 items-end justify-between border-b border-black/20 px-4 py-4 sm:py-6 sm:px-6 lg:px-10">
             <h2
               id="project-gallery-title"
-              className="font-mono text-[10px] font-normal tracking-[0.18em] uppercase sm:text-xs"
+              className="font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.18em] uppercase sm:text-xs"
             >
               {text.gallery}
             </h2>
-            <span className="font-mono text-[10px] font-normal tracking-[0.16em] text-black/45 sm:text-xs">
+            <span className="font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.16em] text-black/45 sm:text-xs">
               {formatProjectNumber(project.gallery.length)} {text.images}
             </span>
           </div>
@@ -382,23 +382,23 @@ export default function ProjectShowcase({
       <Link
         href={projectPath(locale, nextProject.slug)}
         transitionTypes={["nav-forward"]}
-        className="group grid min-h-[70svh] overflow-hidden bg-[#d8d7d2] focus-visible:outline-2 focus-visible:outline-offset-[-4px] lg:grid-cols-2"
+        className="group grid min-h-0 overflow-hidden bg-[#d8d7d2] focus-visible:outline-2 focus-visible:outline-offset-[-4px] lg:min-h-[70svh] lg:grid-cols-2"
         aria-label={`${text.next}: ${nextProject.title}`}
       >
-        <div className="flex min-h-80 flex-col justify-between border-b border-black/20 px-4 py-8 sm:px-6 sm:py-10 lg:min-h-0 lg:border-r lg:border-b-0 lg:px-10 lg:py-12">
-          <div className="flex items-center justify-between font-mono text-[10px] font-normal tracking-[0.18em] uppercase sm:text-xs">
+        <div className="flex min-h-0 flex-col justify-between border-b border-black/20 px-4 py-6 sm:px-6 sm:py-10 lg:min-h-0 lg:border-r lg:border-b-0 lg:px-10 lg:py-12">
+          <div className="flex items-center justify-between font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.18em] uppercase sm:text-xs">
             <span>{text.next}</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
           </div>
-          <div className="mt-20">
-            <p className="mb-5 text-xs text-black/50">{nextProject.category}</p>
-            <h2 className="max-w-[14ch] text-[clamp(2.75rem,4.55vw,5.5rem)] leading-[0.84] font-[950] tracking-[-0.08em] uppercase">
+          <div className="mt-8 sm:mt-20">
+            <p className="mb-2 sm:mb-5 text-[11px] sm:text-xs text-black/50">{nextProject.category}</p>
+            <h2 className="max-w-[14ch] text-[clamp(1.75rem,7vw,3.5rem)] leading-[0.9] sm:leading-[0.84] font-[950] tracking-[-0.04em] sm:tracking-[-0.08em] uppercase lg:text-[clamp(2.75rem,4.55vw,5.5rem)]">
               {nextProject.title}
             </h2>
           </div>
         </div>
 
-        <div className="relative min-h-[55svh] overflow-hidden bg-[#111]">
+        <div className="relative min-h-[35svh] sm:min-h-[55svh] overflow-hidden bg-[#111]">
           <ViewTransition
             name={`project-cover-${nextProject.slug}`}
             share="project-morph"
@@ -409,7 +409,7 @@ export default function ProjectShowcase({
               alt=""
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-contain p-8 transition-transform duration-700 ease-out group-hover:scale-[1.035] sm:p-12"
+              className="object-contain p-6 sm:p-12 transition-transform duration-700 ease-out group-hover:scale-[1.035]"
             />
           </ViewTransition>
         </div>

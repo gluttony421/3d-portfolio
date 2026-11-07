@@ -446,12 +446,12 @@ export default function ModelViewer({
       )}
 
       {/* 3D Controls toolbar */}
-      <div className="pointer-events-none absolute right-4 bottom-4 left-4 z-20 flex flex-wrap items-center justify-between gap-2 sm:right-6 sm:bottom-6 sm:left-6">
-        <div className="pointer-events-auto flex flex-wrap items-center gap-1.5 rounded-full border border-black/15 bg-[#efeee9]/95 p-1 font-mono text-[9px] tracking-[0.12em] text-black uppercase shadow-lg backdrop-blur-sm sm:text-[10px]">
+      <div className="pointer-events-none absolute right-3 bottom-3 left-3 z-20 flex flex-col gap-2 sm:right-6 sm:bottom-6 sm:left-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="pointer-events-auto flex max-w-full items-center gap-1 overflow-x-auto rounded-full border border-black/15 bg-[#efeee9]/95 p-1 font-mono text-[9px] tracking-[0.08em] text-black uppercase shadow-lg backdrop-blur-sm [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:gap-1.5 sm:text-[10px] sm:tracking-[0.12em]">
           <button
             type="button"
             onClick={() => setWireframe((prev) => !prev)}
-            className={`rounded-full px-3 py-1.5 transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 transition-colors sm:px-3 sm:py-1.5 ${
               wireframe ? "bg-black text-white" : "hover:bg-black/10"
             }`}
             aria-pressed={wireframe}
@@ -462,7 +462,7 @@ export default function ModelViewer({
           <button
             type="button"
             onClick={() => setAutoRotate((prev) => !prev)}
-            className={`rounded-full px-3 py-1.5 transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 transition-colors sm:px-3 sm:py-1.5 ${
               autoRotate ? "bg-black text-white" : "hover:bg-black/10"
             }`}
             aria-pressed={autoRotate}
@@ -473,7 +473,7 @@ export default function ModelViewer({
           <button
             type="button"
             onClick={cycleLighting}
-            className="rounded-full px-3 py-1.5 transition-colors hover:bg-black/10"
+            className="shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 transition-colors hover:bg-black/10 sm:px-3 sm:py-1.5"
           >
             {isRu ? "СВЕТ" : "LIGHT"}:{" "}
             {isRu ? lightingPreset.labelRu : lightingPreset.labelEn}
@@ -482,7 +482,7 @@ export default function ModelViewer({
           <button
             type="button"
             onClick={cycleBackground}
-            className="rounded-full px-3 py-1.5 transition-colors hover:bg-black/10"
+            className="shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 transition-colors hover:bg-black/10 sm:px-3 sm:py-1.5"
           >
             {isRu ? "ФОН" : "BG"}:{" "}
             {isRu ? backgroundPreset.labelRu : backgroundPreset.labelEn}
@@ -491,21 +491,21 @@ export default function ModelViewer({
           <button
             type="button"
             onClick={() => setResetCounter((count) => count + 1)}
-            className="rounded-full px-3 py-1.5 transition-colors hover:bg-black/10"
+            className="shrink-0 whitespace-nowrap rounded-full px-2.5 py-1 transition-colors hover:bg-black/10 sm:px-3 sm:py-1.5"
           >
-            {isRu ? "СБРОС КАМЕРЫ" : "RESET CAM"}
+            {isRu ? "СБРОС" : "RESET"}
           </button>
         </div>
 
         <button
           type="button"
           onClick={toggleFullscreen}
-          className="pointer-events-auto rounded-full border border-black/15 bg-[#efeee9]/95 px-3.5 py-2 font-mono text-[9px] tracking-[0.12em] text-black uppercase shadow-lg backdrop-blur-sm transition-colors hover:bg-black hover:text-white sm:text-[10px]"
+          className="pointer-events-auto shrink-0 self-end rounded-full border border-black/15 bg-[#efeee9]/95 px-3 py-1.5 font-mono text-[9px] tracking-[0.1em] text-black uppercase shadow-lg backdrop-blur-sm transition-colors hover:bg-black hover:text-white sm:self-auto sm:px-3.5 sm:py-2 sm:text-[10px]"
         >
           {isFullscreen
             ? isRu
-              ? "ВЫЙТИ ИЗ ПОЛНОГО ЭКРАНА ×"
-              : "EXIT FULLSCREEN ×"
+              ? "ВЫЙТИ ×"
+              : "EXIT ×"
             : isRu
               ? "НА ВЕСЬ ЭКРАН ↗"
               : "FULLSCREEN ↗"}

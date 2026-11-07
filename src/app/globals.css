@@ -3,8 +3,8 @@
 :root {
   --background: #efeee9;
   --foreground: #050505;
-  --font-vhils-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  --font-vhils-mono: "Courier New", Courier, monospace;
+  --font-vhils-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-vhils-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --route-exit-duration: 140ms;
   --route-enter-duration: 220ms;
   --route-move-duration: 420ms;

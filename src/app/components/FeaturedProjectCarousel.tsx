@@ -37,7 +37,7 @@ export default function FeaturedProjectCarousel({
   const activeProject = projects[activeIndex] ?? projects[0];
 
   return (
-    <div className="hero-media group relative min-h-[46.4svh] overflow-hidden bg-black lg:min-h-0">
+    <div className="hero-media group relative min-h-[35svh] sm:min-h-[46.4svh] overflow-hidden bg-black lg:min-h-0">
       <Link
         href={projectPath(locale, activeProject.slug)}
         transitionTypes={["nav-forward"]}
@@ -52,14 +52,14 @@ export default function FeaturedProjectCarousel({
             fill
             preload={index === 0}
             sizes="(max-width: 1024px) 100vw, 42vw"
-            className={`scale-[1.1] object-contain transition-[opacity,transform] duration-1000 ease-out group-hover:scale-[1.14] ${
+            className={`scale-100 sm:scale-[1.1] object-contain transition-[opacity,transform] duration-1000 ease-out group-hover:scale-[1.04] sm:group-hover:scale-[1.14] ${
               index === activeIndex ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           />
         ))}
 
         <div
-          className="absolute bottom-5 left-5 max-w-[calc(100%-7rem)] bg-black px-3 py-2 font-mono text-[10px] tracking-[0.08em] text-white uppercase"
+          className="absolute bottom-3 left-3 max-w-[calc(100%-6rem)] sm:bottom-5 sm:left-5 sm:max-w-[calc(100%-7rem)] bg-black/90 px-2.5 py-1.5 sm:px-3 sm:py-2 font-mono text-[9px] sm:text-[10px] tracking-[0.08em] text-white uppercase backdrop-blur-sm"
           aria-live="polite"
         >
           {activeProject.title} ↗
@@ -68,7 +68,7 @@ export default function FeaturedProjectCarousel({
 
       {projects.length > 1 && (
         <div
-          className="absolute right-5 bottom-5 z-10 flex gap-1.5"
+          className="absolute right-3 bottom-3 z-10 flex gap-1.5 sm:right-5 sm:bottom-5"
           aria-label={locale === "ru" ? "Выбор проекта" : "Choose project"}
         >
           {projects.map((project, index) => (

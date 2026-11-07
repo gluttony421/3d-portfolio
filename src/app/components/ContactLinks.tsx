@@ -209,23 +209,23 @@ export default function ContactLinks({
           return (
             <li
               key={`${item.href}-${index}`}
-              className="group/contact flex items-center gap-2"
+              className="group/contact flex flex-wrap sm:flex-nowrap items-center gap-1.5 sm:gap-2"
             >
-              <span className="w-[4.75rem] shrink-0 font-mono text-[9px] tracking-[0.14em] text-white/45 uppercase">
+              <span className="w-16 sm:w-[4.75rem] shrink-0 font-mono text-[9px] tracking-[0.14em] text-white/45 uppercase">
                 {isRu ? KIND_LABEL[item.kind].ru : KIND_LABEL[item.kind].en}
               </span>
               <a
                 href={item.href}
                 target={isExternal ? "_blank" : undefined}
                 rel={isExternal ? "noopener noreferrer" : undefined}
-                className="min-w-0 truncate underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
+                className="min-w-0 max-w-[calc(100%-5rem)] sm:max-w-none truncate underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
               >
                 {item.display}
               </a>
               <button
                 type="button"
                 onClick={() => handleCopy(item.copyValue, index)}
-                className={`shrink-0 rounded-full border px-2 py-0.5 font-mono text-[9px] tracking-[0.12em] uppercase transition-colors ${
+                className={`ml-auto sm:ml-0 shrink-0 rounded-full border px-2 py-0.5 font-mono text-[8px] sm:text-[9px] tracking-[0.12em] uppercase transition-colors ${
                   copied
                     ? "border-white bg-white text-black"
                     : "border-white/30 text-white/70 hover:border-white hover:text-white"
