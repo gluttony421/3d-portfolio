@@ -208,7 +208,7 @@ export default function PortfolioHome({ locale }: { locale: Locale }) {
                         {project.title}
                       </h3>
                       <p className="mt-1 font-mono text-[9px] tracking-[0.09em] text-black/55 uppercase sm:text-[10px]">
-                        {project.category} · {project.software[0]} · {project.year}
+                        {project.category} · {project.software[0]}
                       </p>
                     </div>
                   </Link>

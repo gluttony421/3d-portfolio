@@ -16,7 +16,7 @@ export const copy = {
       "This portfolio brings together vehicles, props, machines and other 3D studies, created through research, modeling, texturing and presentation.",
     work: { library: "Library / A—Z", title: "Selected works", projects: "projects" },
     footer: {
-      portfolio: "© 2026 Portfolio",
+      portfolio: "© Portfolio",
       role: "3D artist / Modeling and visualization",
       top: "Back to top ↑",
     },
@@ -69,7 +69,7 @@ export const copy = {
       "Это портфолио объединяет транспорт, предметы, машины и другие 3D-работы, созданные через исследование, моделирование, текстурирование и презентацию.",
     work: { library: "Архив / А—Я", title: "Избранные работы", projects: "проектов" },
     footer: {
-      portfolio: "© 2026 Портфолио",
+      portfolio: "© Портфолио",
       role: "3D-художник / Моделирование и визуализация",
       top: "Наверх ↑",
     },

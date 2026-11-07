@@ -136,7 +136,7 @@ export default function ProjectShowcase({
       <section className="grid min-h-0 grid-cols-1 border-b border-black/20 lg:min-h-[calc(40.32svh-2.8rem)] lg:grid-cols-12">
         <div className="flex flex-col justify-between px-4 py-4 sm:px-6 sm:py-[1.4rem] lg:col-span-9 lg:border-r lg:border-black/20 lg:px-10 lg:py-[1.68rem]">
           <p className="hero-reveal font-mono text-[9px] sm:text-[10px] font-normal tracking-[0.16em] sm:tracking-[0.18em] text-black/50 uppercase sm:text-xs">
-            {project.category} / {project.year}
+            {project.category}
           </p>
 
           <h1
