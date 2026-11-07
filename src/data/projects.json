@@ -29,5 +29,35 @@
     },
     "gallery": [],
     "video": "https://www.youtube.com/watch?v=fT9AHvaUdRM"
+  },
+  {
+    "slug": "metal-master-mlf-3015r",
+    "title": "Metal Master MLF-3015R",
+    "category": "Industrial Modeling",
+    "cover": "/projects/metal-master-mlf-3015r/cover.png",
+    "description": "Metal Master MLF-3015R — Industrial Modeling (Blender, Substance 3D Painter, 2026).",
+    "translations": {
+      "ru": {
+        "title": "Metal Master MLF-3015R",
+        "category": "Промышленное моделирование",
+        "description": "Metal Master MLF-3015R — Промышленное моделирование (Blender, Substance 3D Painter, 2026)."
+      }
+    },
+    "software": [
+      "Blender",
+      "Substance 3D Painter"
+    ],
+    "year": 2026,
+    "size": "small",
+    "specs": {
+      "polygons": "24,000",
+      "vertices": "13,000",
+      "textures": "4K PBR",
+      "materials": "1",
+      "uvMaps": "1",
+      "renderer": "Cycles"
+    },
+    "gallery": [],
+    "model": "/projects/metal-master-mlf-3015r/model.glb"
   }
 ]
